@@ -40,22 +40,28 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">
-        My creative <span>portfolio</span>
+        My <span>work</span>
       </h2>
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React Js", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {[
+          "React js",
+          "Umbraco",
+          "Javascript",
+          "REST API",
+          "Dynamic website",
+          "Static website",
+          "All",
+        ].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
       <motion.div
         animate={animateCard}
@@ -75,7 +81,7 @@ const Work = () => {
                 }}
                 className="app__work-hover app__flex"
               >
-                <a href={work.projectLink} target="_blank" rel="noreferrer">
+                <a href={work.projectLink} target="_blank">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
