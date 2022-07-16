@@ -18,7 +18,7 @@ const About = () => {
     <>
       <h2 className="head-text">
         I know that <span>great User experience</span>
-        <br /> means <span>Good Buisness</span>
+        <br /> means <span>Good Business</span>
       </h2>
 
       <div className="app__profiles">
